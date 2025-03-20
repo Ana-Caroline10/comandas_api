@@ -1,34 +1,40 @@
+@token =  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3NDI0MTA4MjZ9.joTj3709nt7SOIBzlOm8EBLk5oBBuDHabIDUteuMIpU
+## Ana Caroline Silveira Felipe ##
+
 ### Verbo GET - listar todos 
 GET http://localhost:8000/cliente HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### Verbo GET – listar um
 GET http://localhost:8000/cliente/10 HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### Verbo POST – adicionar
 POST http://127.0.0.1:8000/cliente/ HTTP/1.1
+Authorization: Bearer {{token}}
+content-type: application/json
+
+{
+"nome" : "Yohana",
+"matricula" : "336",
+"cpf" : "748596325",
+"telefone" : "012365",
+"senha" : "wer4561"
+}
+
+### Verbo PUT – atualiza
+PUT http://127.0.0.1:8000/cliente/2 HTTP/1.1
+Authorization: Bearer {{token}}
 content-type: application/json
 
 {
 "nome" : "Marcelino",
 "matricula" : "14795",
-"cpf" : "12345678971",
-"telefone" : "123456789",
-"grupo" : 1,
+"cpf" : "45678971",
+"telefone" : "3456789",
 "senha" : "asqwer14787"
 }
 
-### Verbo PUT – atualiza
-PUT http://127.0.0.1:8000/cliente/2 HTTP/1.1
-content-type: application/json
-
-{
-"nome" : "Marcelino Ferreira",
-"matricula" : "Ana123",
-"cpf" : "1",
-"telefone" : "88126487",
-"grupo" : 1,
-"senha" : "aabbccddee7"
-}
-
 ### Verbo DELETE - excluir
-DELETE http://127.0.0.1:8000/cliente/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/cliente/4 HTTP/1.1
+Authorization: Bearer {{token}}

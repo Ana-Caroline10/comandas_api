@@ -6,3 +6,4 @@ class Cliente(BaseModel):
     nome: str
     cpf: str
     telefone: str
+   

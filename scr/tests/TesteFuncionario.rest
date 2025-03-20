@@ -1,34 +1,43 @@
+## Ana Caroline Silveira Felipe ##
+
+@token =  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3NDI0MTA4MjZ9.joTj3709nt7SOIBzlOm8EBLk5oBBuDHabIDUteuMIpU
+
 ### Verbo GET - listar todos 
 GET http://localhost:8000/funcionario HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### Verbo GET – listar um
 GET http://localhost:8000/funcionario/10 HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### Verbo POST – adicionar
 POST http://127.0.0.1:8000/funcionario/ HTTP/1.1
+Authorization: Bearer {{token}}
 content-type: application/json
 
 {
-  "nome" : "Valeria",
-   "matricula" : "1446",
-   "cpf" : "14785296314",
-   "telefone" : "126478941",
-   "grupo" : "1",
-   "senha" : "girafa123"
+  "nome" : "ze  batatas",
+   "matricula" : "125",
+   "cpf" : "321748",
+   "telefone" : "1405785",
+   "grupo" : "4",
+   "senha" : "123"
 }
 
 ### Verbo PUT – atualiza
 PUT http://127.0.0.1:8000/funcionario/2 HTTP/1.1
+Authorization: Bearer {{token}}
 content-type: application/json
 
 {
-    "nome" : "Seline",
-    "matricula" : "Sesi123",
-    "cpf" : "00033311150",
-    "telefone" : "333333333",
-    "grupo" : "1",
-    "senha" : "Dog321"
+    "nome" : "Zé das Batatas",
+    "matricula" : "01234",
+    "cpf" : "01478523697",
+    "telefone" : "333",
+    "grupo" : "2",
+    "senha" : "cat321"
 }
 
 ### Verbo DELETE - excluir
-DELETE http://127.0.0.1:8000/funcionario/3 HTTP/1.1
+DELETE http://127.0.0.1:8000/funcionario/6 HTTP/1.1
+Authorization: Bearer {{token}}

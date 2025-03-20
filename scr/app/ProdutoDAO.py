@@ -3,11 +3,16 @@ from fastapi import APIRouter
 from domain.entities.Produto import Produto
 import db
 from Infra.orm.ProdutoModel import ProdutoDB
-router = APIRouter()
+# import da segurança
+from typing import Annotated
+from fastapi import Depends
+from security import get_current_active_user, User
+
+router = APIRouter(dependencies=[Depends(get_current_active_user)])
 
 
 # Criar as rotas/endpoints: GET, POST, PUT, DELETE
-@router.get("/produto", tags=["Produto"])
+@router.get("/produto", tags=["Produto"], dependencies=[Depends(get_current_active_user)],)
 async def get_produto():
    try:
            session = db.Session()

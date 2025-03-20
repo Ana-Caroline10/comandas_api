@@ -1,32 +1,39 @@
+## Ana Caroline Silveira Felipe ##
 
+@token =  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhYmMiLCJleHAiOjE3NDI0MTA4MjZ9.joTj3709nt7SOIBzlOm8EBLk5oBBuDHabIDUteuMIpU
 ### Verbo GET - listar todos 
 GET http://localhost:8000/produto HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### Verbo GET – listar um
 GET http://localhost:8000/produto/10 HTTP/1.1
+Authorization: Bearer {{token}}
 
 ### Verbo POST – adicionar
 POST http://127.0.0.1:8000/produto/ HTTP/1.1
+Authorization: Bearer {{token}}
 content-type: application/json
 
 {
-"nome" : "catechup",
-"descricao":"molho",
-"valor_unitario":"10",
+"nome" : "Carne Queijo Ovo",
+"descricao":"Carne Queijo Ovo",
+"valor_unitario":"15",
 "foto":"" 
 
 }
 
 ### Verbo PUT – atualiza
 PUT http://127.0.0.1:8000/produto/2 HTTP/1.1
+Authorization: Bearer {{token}}
 content-type: application/json
 
 {
-"nome" : "catechup",
-"descricao":"molho",
-"valor_unitario":"5",
+"nome" : "Carne, Queijo, Ovo",
+"descricao":"sabor",
+"valor_unitario":"20",
 "foto": ""
 }
 
 ### Verbo DELETE - excluir
 DELETE http://127.0.0.1:8000/produto/3 HTTP/1.1
+Authorization: Bearer {{token}}

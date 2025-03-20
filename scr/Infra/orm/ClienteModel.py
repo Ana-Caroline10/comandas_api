@@ -9,9 +9,11 @@ class ClienteDB(db.Base):
     nome = Column(VARCHAR(100), nullable=False)
     cpf = Column(CHAR(11), unique=True, nullable=False, index=True)
     telefone = Column(CHAR(11), nullable=False)
+    
 
     def __init__(self, id_cliente, nome, cpf, telefone):
         self.id_cliente = id_cliente
         self.nome = nome
         self.cpf = cpf
         self.telefone = telefone
+       
